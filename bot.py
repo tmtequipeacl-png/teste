@@ -43,7 +43,7 @@ def job():
     for grupo_id in DESTINATARIOS:
         enviar_mensagem_whatsapp(grupo_id, msg_teste)
 
-schedule.every().tuesday.at("09:25").do(job)
+schedule.every().tuesday.at("09:45").do(job)
 
 print("=" * 60)
 print("Robô de agendamento iniciado.")
