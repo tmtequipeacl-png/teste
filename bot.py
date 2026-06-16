@@ -9,7 +9,7 @@ INSTANCE_NAME = "empresaTMT"
 DESTINATARIO_UNICO = "5519994418222"
 
 def enviar_mensagem_whatsapp(destinatario, mensagem):
-    """Função de envio correta para a Evolution API v2"""
+    """Função de envio universal para Evolution API v2"""
     url = f"{EVOLUTION_URL}/message/sendText/{INSTANCE_NAME}"
     headers = {
         "Content-Type": "application/json",
@@ -18,13 +18,7 @@ def enviar_mensagem_whatsapp(destinatario, mensagem):
 
     payload = {
         "number": destinatario,
-        "options": {
-            "delay": 1200,
-            "presence": "composing"
-        },
-        "textMessage": {
-            "text": mensagem
-        }
+        "text": mensagem
     }
     
     try:
@@ -42,10 +36,10 @@ def enviar_mensagem_whatsapp(destinatario, mensagem):
 def job():
     print("\n--- Iniciando Disparo Automatizado ---")
     msg_teste = "Bom dia, mensagem teste para ver se esta tudo funcionando!"
-    
     enviar_mensagem_whatsapp(DESTINATARIO_UNICO, msg_teste)
 
-schedule.every().tuesday.at("13:43").do(job)
+
+schedule.every().tuesday.at("13:50").do(job)
 
 print("=" * 60)
 print("Robô de agendamento iniciado com sucesso!")
