@@ -3,7 +3,7 @@ import schedule
 import time
 
 EVOLUTION_URL = "https://evolution-api-production-9b8c0.up.railway.app"
-API_KEY = "065717adde59669b240bbdd91cf1300302b3ac3b799f44cba52d674c61b6630d"
+API_KEY = "8A58085775DA-4D12-B187-18C3E350C89C"
 INSTANCE_NAME = "empresaTMT"
 
 DESTINATARIO_UNICO = "5519994418222"
