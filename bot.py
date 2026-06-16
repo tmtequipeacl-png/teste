@@ -39,7 +39,7 @@ def job():
     enviar_mensagem_whatsapp(DESTINATARIO_UNICO, msg_teste)
 
 
-schedule.every().tuesday.at("13:50").do(job)
+schedule.every().tuesday.at("13:52").do(job)
 
 print("=" * 60)
 print("Robô de agendamento iniciado com sucesso!")
