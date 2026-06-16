@@ -45,13 +45,14 @@ def job():
     
     enviar_mensagem_whatsapp(DESTINATARIO_UNICO, msg_teste)
 
-schedule.every().tuesday.at("10:02").do(job)
+schedule.every().tuesday.at("10:05").do(job)
 
 print("=" * 60)
-print("Robô de agendamento iniciado.")
-print(f"Monitorando o relógio... Destinatário configurado: {DESTINATARIO_UNICO}")
+print("Robô de agendamento iniciado com sucesso!")
+print(f"Monitorando... Destinatário: {DESTINATARIO_UNICO}")
 print("=" * 60)
 
 while True:
+    print(f"[Status] Robô ativo. Horário do Servidor: {time.strftime('%H:%M:%S')}")
     schedule.run_pending()
-    time.sleep(1)
+    time.sleep(10)
